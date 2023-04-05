@@ -170,11 +170,11 @@ void selection(const Vector2i &start, const Vector2i &end, void *clientData)
 void timeStep ()
 {
 	const Real pauseAt = base->getValue<Real>(DemoBase::PAUSE_AT);
-	if ((pauseAt > 0.0) && (pauseAt < TimeManager::getCurrent()->getTime()))
-		base->setValue(DemoBase::PAUSE, true);
+	// if ((pauseAt > 0.0) && (pauseAt < TimeManager::getCurrent()->getTime()))
+	// 	base->setValue(DemoBase::PAUSE, true);
 
-	if (base->getValue<bool>(DemoBase::PAUSE))
-		return;
+	// if (base->getValue<bool>(DemoBase::PAUSE))
+	// 	return;
 
 	// Simulation code
 	const unsigned int numSteps = base->getValue<unsigned int>(DemoBase::NUM_STEPS_PER_RENDER);

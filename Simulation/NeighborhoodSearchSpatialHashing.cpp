@@ -116,9 +116,9 @@ void NeighborhoodSearchSpatialHashing::neighborhoodSearch(Vector3r *x)
 	}
 
 	// loop over all 27 neighboring cells
-	#pragma omp parallel default(shared)
+	// #pragma omp parallel default(shared)
 	{
-		#pragma omp for schedule(static) 
+		// #pragma omp for schedule(static) 
 		for (int i=0; i < (int) m_numParticles; i++)
 		{
 			m_numNeighbors[i] = 0;
@@ -215,9 +215,9 @@ void NeighborhoodSearchSpatialHashing::neighborhoodSearch(Vector3r *x, const uns
 	}
 
 	// loop over all 27 neighboring cells
-	#pragma omp parallel default(shared)
+	// #pragma omp parallel default(shared)
 	{
-		#pragma omp for schedule(static)  
+		// #pragma omp for schedule(static)  
 		for (int i=0; i < (int) m_numParticles; i++)
 		{
 			m_numNeighbors[i] = 0;
